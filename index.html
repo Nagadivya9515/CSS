@@ -145,7 +145,7 @@ input[type="checkbox"] {
             <label for="NotificationSetting_class_discussion">Updates from Classes You're Taking</label>                <p>
                 Announcements, events, and tips and tricks.                </p>
                                 <p>
-                    <a href="javascript:;" class="subpanel-toggle">
+                    <a href="#" class="subpanel-toggle">
                         Edit Individual Classes                            (1)
                     </a>
                 </p>
@@ -166,7 +166,7 @@ input[type="checkbox"] {
             <label for="NotificationSetting_user_discussion">Updates from Teacher Discussions</label>                <p>
                 Public Discussions outside of a class that teachers share to all of their followers.                </p>
                                 <p>
-                    <a href="javascript:;" class="subpanel-toggle">
+                    <a href="#" class="subpanel-toggle">
                         Edit Individual Teachers                            (1)
                     </a>
                 </p>
@@ -257,22 +257,6 @@ input[type="checkbox"] {
 </fieldset>
 </form>            </div>
     </div>
-    <script>
-   document.addEventListener('DOMContentLoaded', function() {
-        // Select all elements with the class 'subpanel-toggle'
-        document.querySelectorAll('.subpanel-toggle').forEach(function(toggle) {
-            // Add a click event listener to each of them
-            toggle.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent the default link behavior
-                // Find the nearest subpanel within the same parent element
-                const subpanel = this.closest('.fields-wrapper').querySelector('.subpanel');
-                // Toggle the 'hidden' class on the subpanel to show or hide it
-                if (subpanel) {
-                    subpanel.classList.toggle('hidden');
-                }
-            });
-        });
-    });
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
