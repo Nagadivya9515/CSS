@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
     font-family: Arial, sans-serif;
@@ -129,9 +130,132 @@ input[type="checkbox"] {
     color: #888;
 }
 .hidden {display:none;}
+
+        .container {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+background-color: #01234f;
+        }
+        .logo img {
+            vertical-align: middle;
+        }
+        .nav {
+           float: left;
+           /* position: relative; */
+           display: inline-block;
+           padding-right: 20px;
+        }
+        .nav ul {
+            list-style-type: none;
+            margin: none;
+            padding:0;
+            display: flex;
+            flex-direction: row;
+        }
+        .nav ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 15px 0 10px 30px;
+            color: #fff;
+        }
+       
+        .sign {
+            color: #000 !important;
+            background-color: #EDA404;
+            border-radius: 1em;
+            width: 52px;
+            padding: 12px 15px !important;
+            margin-top: 7px;
+            margin-left: 8px;
+            margin: 7px auto;
+        }
+        #search {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+#search input[type="text"] {
+    padding-right: 30px; /* Adjust space for the icon */
+    width: 200px; /* Adjust the width as needed */
+}
+
+#search::after {
+    content: '\1F50D'; /* Unicode for a search icon */
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(111, 0, 255); /* Adjust the icon color */
+    pointer-events: none;
+}
+#menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 848px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .nav ul.show {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+        color: white;
+        padding-top: 30px;
+    }
+}
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="logo" style=" width : 280px;
+        margin: 0 ;"><a href="https://edzorblaw.com/#spu-8506">
+    <img src="http://cdn.mcauto-images-production.sendgrid.net/7c83a91e7c423767/9e21d4cb-e4a8-4f36-bded-58c33be7eb14/917x268.png" style="max-width: 100%;" width="280px" />
+</a>
+</div>
+<div class="nav">
+    <ul id="nav-links">
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-house"></i>Home</a
+            >
+          </li>
+          <li><a href="">
+          <i class="fa-solid fa-folder"></i>My Course
+          </a></li>
+          
+          <li>
+            <a href="#"><div id="search" style="display:inline-block;border:0.5px solid rgb(111, 0, 255);">
+                <input type="text" style="border:none; outline: none;padding: 3% 0;" /></div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="sign">
+            Sign in</a
+            >
+          </li>
+    </ul>
+    <div id="menu-icon" onclick="toggleNav()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+</div>
+    </div>
     <div class="white-content-container">
         <div class="container-header clear">
             <h3 class="page-title left">Email Notifications</h3>
@@ -145,7 +269,7 @@ input[type="checkbox"] {
             <label for="NotificationSetting_class_discussion">Updates from Classes You're Taking</label>                <p>
                 Announcements, events, and tips and tricks.                </p>
                                 <p>
-                    <a href="#" class="subpanel-toggle">
+                    <a href="javascript:;" class="subpanel-toggle">
                         Edit Individual Classes                            (1)
                     </a>
                 </p>
@@ -166,7 +290,7 @@ input[type="checkbox"] {
             <label for="NotificationSetting_user_discussion">Updates from Teacher Discussions</label>                <p>
                 Public Discussions outside of a class that teachers share to all of their followers.                </p>
                                 <p>
-                    <a href="#" class="subpanel-toggle">
+                    <a href="javascript:;" class="subpanel-toggle">
                         Edit Individual Teachers                            (1)
                     </a>
                 </p>
@@ -257,6 +381,68 @@ input[type="checkbox"] {
 </fieldset>
 </form>            </div>
     </div>
-    <script src="index.js"></script>
+<!-- linear-gradient(180deg, #004166 0%, #002033 100%), linear-gradient(180deg, #0E4B58 0%, #0F5F70 100%) -->
+    <footer style="background:linear-gradient(180deg, #004166 0%, #002033 100%); color: #fff; padding: 20px 20px 20px 100px;">
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+      
+          <!-- Column 1 -->
+          <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <!-- <h3 style="color: #fff; margin-bottom: 10px;">Company</h3> -->
+          <img src="https://Operations.EdzorbMailer.com/uploads/1724761071.png" style="width: 120px" />
+          <div class="dash" style="width:100px;opacity:0.8;"><hr></div>
+            <ul style="list-style-type: none; padding: 0;">
+              <li><a href="/about" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">About Us</a></li>
+              <li><a href="/careers" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Careers</a></li>
+              <li><a href="/press" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Press</a></li>
+              <li><a href="/contact" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Contact Us</a></li>
+            </ul>
+          </div>
+      
+          <!-- Column 2 -->
+          <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <p style="color: #fff; margin-bottom: 10px;">Popular Courses</p>
+            <div class="dash" style="width:100px;opacity:0.8;"><hr></div>
+            <ul style="list-style-type: none; padding: 0;">
+              <li><a href="/faq" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;background-color: #EDA404;padding: 4px;border-radius: 6px;color:#000;">Premium+ Plan</a></li>
+              <li><a href="/help-center" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Mark Enhancement Program</a></li>
+              <li><a href="/terms" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Elite Plan</a></li>
+              <li><a href="/privacy" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Fastrack Crash Courses</a></li>
+            </ul>
+          </div>
+      
+          <!-- Column 3 -->
+          <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <p style="color: #fff; margin-bottom: 10px;">Other Links</p>
+            <div class="dash" style="width:100px;opacity:0.8;"><hr></div>
+            <ul style="list-style-type: none; padding: 0;">
+              <li><a href="/consulting" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Free Resources</a></li>
+              <li><a href="/mentorship" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">What Makes Edzorb Law Unique</a></li>
+              <li><a href="/webinars" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Syllabus</a></li>
+              <li><a href="/resources" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Contact Us</a></li>
+            </ul>
+          </div>
+      
+          <!-- Column 4 -->
+          <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+            <p style="color: #fff; margin-bottom: 10px;">Join Our Free Mentorship</p>
+            <div class="dash" style="width:100px;opacity:0.8;"><hr></div>
+            <ul style="list-style-type: none; padding: 0;">
+              <li><a href="https://www.facebook.com" target="_blank" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Sign Up Now For Free Mentorship</a></li>
+              <li><input type="email" placeholder="Enter email..." style="padding: 10px;border-radius:10px;outline: none;border: none;"/><a href="https://www.twitter.com" target="_blank" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;" class="sign">Sign Up</a></li>
+              <li><a href="https://www.linkedin.com" target="_blank" style="color: #fff; text-decoration: none;line-height: 2;font-size:0.8em;">Joined by 10,000+ students</a></li>
+            </ul>
+          </div>
+      
+        </div>
+      
+        <!-- Bottom Footer Note -->
+        <div style="text-align: center; padding: 10px 0; background-color: #222;">
+          <p style="margin: 0; color: #aaa;font-size:0.8em;">© 2024 Your Company. All rights reserved.</p>
+        </div>
+      </footer>
+      
+    <script src="index.js">
+  
+    </script>
 </body>
 </html>
