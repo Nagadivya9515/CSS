@@ -71,3 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function toggleNav() {
+    var navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('show');
+}
